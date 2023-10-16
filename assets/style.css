@@ -1,0 +1,221 @@
+/* main styling */
+*{
+    max-width: 430px;
+    max-height: 900px;
+    font-family: 'Noto Serif', serif;
+}
+
+body{
+    height: 900px;
+    cursor: url(images/puppyPaw.jpeg),auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+    
+}
+.fullScreenContainer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    display: flex;
+    width: 100%;
+    background-color: #4FD3D5;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.centerContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 70%;
+ 
+}
+
+.centerContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 20px;
+    
+    
+}
+
+footer{
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    background-color: #4FD3D5;
+   
+}
+
+.button{
+    border-radius: 20%;
+    margin: 10px;
+    background-color: #FBE63B;
+    border: 1px solid #FFF8BA ;
+    box-shadow: 0px 0px 10px 0px #AE9C00;
+    height: 100px;
+    width: 200px;
+    font-size: large;
+    font-weight: bold;  
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    
+}
+input{
+    padding: 20px;
+    margin: 20px;
+}
+
+
+
+/* Paw Print Animation */
+.pad {
+    width: 25px;
+    height: 27px;
+    background-color: #4FD3D5;
+    -webkit-border-radius: 63px 63px 63px 63px / 108px     108px 72px 72px;
+    border-radius: 50%  50%  50%  50%  / 60%   60%         40%  40%;
+    display: block;
+    position: absolute;
+}       
+.large {
+   width: 70px;
+   height: 80px;
+   transform: rotate(80deg);
+   left: 100px;
+   top: 50px;
+} 
+.small-1 {
+   transform: rotate(50deg);
+  left: 145px;
+   top: 28px;
+}
+.small-2 {
+   transform: rotate(65deg);
+  left: 174px;
+   top: 50px;
+}  
+.small-3 {
+   transform: rotate(98deg);
+   position: absolute;
+  left: 178px;
+   top: 87px;
+}
+.small-4 {
+   transform: rotate(140deg);
+   position: absolute;
+  left: 158px;
+   top: 117px;
+}
+    
+/* position and animate */
+    
+.paw-print-1 {
+  opacity: 0;
+  position: absolute;
+  left: 75px;
+  top: 300px;
+  transform: rotate(40deg);
+  -webkit-animation: walk 3s linear infinite;
+  animation: /*keyframe*/walk /*duration*/3s /*transition*/linear /*repeat*/infinite;
+}
+.paw-print-2 {
+  opacity: 0;
+  position: absolute;
+  left: 275px;
+  top: 280px;
+  transform: rotate(5deg); 
+  -webkit-animation: walk 3s linear infinite 0.25s;
+  animation: walk 3s linear infinite /*delay*/0.25s;
+}
+.paw-print-3 {
+  opacity: 0;
+  position: absolute;
+  left: 375px;
+  top: 130px;
+  transform: rotate(10deg); 
+  -webkit-animation: walk 3s linear infinite 0.5s;
+  animation: walk 3s linear infinite 0.5s;
+}     
+.paw-print-4 {
+  opacity: 0;
+  position: absolute;
+  left: 575px;
+  top: 280px;
+  transform: rotate(20deg); 
+  -webkit-animation: walk 3s linear infinite 0.75s;
+  animation: walk 3s linear infinite 0.75s;
+}    
+.paw-print-5 {
+  opacity: 0;
+  position: absolute;
+  left: 0px;
+  top: 50px;
+  transform: rotate(-10deg); 
+  -webkit-animation: walk 3s linear infinite 1s;
+  animation: walk 3s linear infinite 1s;
+}   
+.paw-print-6 {
+  opacity: 0;
+  position: absolute;
+  left: 875px;
+  top: 200px;
+  transform: rotate(-10deg); 
+  -webkit-animation: walk 3s linear infinite 1.25s;
+  animation: walk 3s linear infinite 11.25s;
+}   
+.paw-print-7 {
+  opacity: 0;
+  position: absolute;
+  left: 1075px;
+  top: 50px;
+  transform: rotate(-20deg); 
+  -webkit-animation: walk 3s linear infinite 1.5s;
+  animation: walk 3s linear infinite 11.5s;
+}   
+.paw-print-8 {
+  opacity: 0;
+  position: absolute;
+  left: 1150px;
+  top: 250px;
+  transform: rotate(-100deg); 
+  -webkit-animation: walk 3s linear infinite 1.75s;
+  animation: walk 3s linear infinite 111.75s;
+}
+    
+/* walking effect animation keyframes */
+    
+@-webkit-keyframes walk {
+  25%  {opacity: .5;}
+  100% {opacity: 0;}
+}
+    
+@keyframes walk {
+  /* appear */
+  25%  {opacity: .5;}
+  /* disappear */
+  100% {opacity: 0;}
+}
