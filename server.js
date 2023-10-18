@@ -17,5 +17,7 @@ app.get('/', (req, res) => {
 app.get('/users', userController.getAllUsers);
 app.get('/users/:id', userController.getUserById);
 app.delete('/users/:id', userController.deleteUser);
+app.post('/users/:id', userController.updateUser);
+app.post('/users/:id', userController.createUser);
 
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))
