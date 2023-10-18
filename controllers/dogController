@@ -1,0 +1,66 @@
+const Dogs =require('../models/dogs')
+
+
+module.exports={
+    getAllDogs,
+    getDogsById,
+    deleteDog,
+    updateDog,
+    createDog
+    
+}
+
+async function getAllDogs(req,res){
+    try{
+        const dogs = await Dogs.find();
+        res.json(dogs);
+    }catch(error){
+        res.status(500).json({error:error.message})
+    }
+}
+
+async function getDogsById(req,res){
+    try{
+        const {id} = req.params;
+        const user = await Users.findById(id);
+        if(dogs){
+            return res.json(user);
+        }
+        res.status(404).json({message:'User not found!'})
+    }catch(error){
+        res.status(500).json({error:error.message})
+    }
+}
+
+async function deleteDog(req,res){
+    try{
+        const {id} = req.params;
+        const deleted = await Users.findByIdAndDelete(id);
+        if(deleted){
+            return res.status(200).send("Dog deleted");
+        }
+        throw new Error("Dog not found");
+    }catch(error){
+        res.status(500).json({error:error.message})
+    }
+}
+
+async function updateDog(req,res){
+    try{
+        const id = req.params.id;
+        const {name,phone,email} = req.body;
+        const updated = await Users.findByIdAndUpdate(id,{name,breed,age,owner},{new:true});
+    }
+    catch(error){
+        res.status(500).json({error:error.message})
+    }
+}
+
+async function createDog(req,res){
+    try{
+        const dogs = await Dogs.create(req.body);
+        res.json(user);
+    }catch(error){
+        res.status(500).json({error:error.message})
+    }
+}

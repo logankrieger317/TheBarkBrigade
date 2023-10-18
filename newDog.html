@@ -11,6 +11,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@100&family=Fjalla+One&family=Londrina+Shadow&family=Noto+Serif&family=Poiret+One&family=Poller+One&family=Raleway:wght@100;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="assets/style.css">
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        
+
     </head>
     <body>
          <!-- Paw Print Animation -->
@@ -95,9 +98,10 @@
                         <input type="text" name="breed" id="breed" placeholder="Breed">
                         <input type="text" name="age" id="age" placeholder="Age">
                         <input type="text" name="owner" id="owner" placeholder="Owner">
-                        <input class="button" type="button" value="Submit">
+                        <button class="button" onclick="exisitingUser()">Submit</button>
                         
                     </form>
+                    <button id="exisitingRedirect " onclick="exisitingUser()">test</button>
                     
            </div>
            <footer>
@@ -110,3 +114,11 @@
         <script src="assets/script.js" async defer></script>
     </body>
 </html>
+
+
+<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+<!-- <script defer src="../scripts/community-parts-script.js"></script> -->
+
+    <!-- javascript -->
+    <!-- let partObj = await axios.get(`http://localhost:3001/${partCollectionURL}/${partID}`) -->
