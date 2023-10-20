@@ -1,0 +1,67 @@
+const Reservation = require('../models/reservations');
+
+
+
+module.exports={
+    getAllReservations,
+    getReservationsById,
+    deleteReservations,
+    updateReservations,
+    createReservations
+    
+}
+
+async function getAllReservations(req,res){
+    try{
+        const reservations = await Reservation.find();
+        res.json(reservations);
+    }catch(error){
+        res.status(500).json({error:error.message})
+    }
+}
+
+async function getReservationsById(req,res){
+    try{
+        const {id} = req.params;
+        const reservations = await Reservation.findById(id);
+        if(reservations){
+            return res.json(reservations);
+        }
+        res.status(404).json({message:'reservation not found!'})
+    }catch(error){
+        res.status(500).json({error:error.message})
+    }
+}
+
+async function deleteReservations(req,res){
+    try{
+        const {id} = req.params;
+        const deleted = await Reservation.findByIdAndDelete(id);
+        if(deleted){
+            return res.status(200).send("reservation deleted");
+        }
+        throw new Error("Reservation not found");
+    }catch(error){
+        res.status(500).json({error:error.message})
+    }
+}
+
+async function updateReservations(req,res){
+    try{
+        const id = req.params.id;
+        const {date, time} = req.body;
+        const updated = await Reservations.findByIdAndUpdate(id,{date,time},{new:true});
+    }
+    catch(error){
+        res.status(500).json({error:error.message})
+    }
+}
+
+async function createReservations(req,res){
+    try{
+        const reservations = await Reservation.create(req.body);
+        res.json(reservations);
+    }catch(error){
+        res.status(500).json({error:error.message})
+    }
+}

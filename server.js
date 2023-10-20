@@ -27,4 +27,11 @@ app.delete('/dogs/:id', dogController.deleteDog);
 app.post('/dogs/:id', dogController.updateDog);
 app.post('/dogs/:id', dogController.createDog);
 
+// app.get('/reservations', reservationsController.getAllReservations);
+// app.get('/reservations/:id', reservationsController.getReservationsById);
+// app.delete('/reservations/:id', reservationsController.deleteReservations);
+// app.post('/reservations/:id', reservationsController.updateReservations);
+// app.post('/reservations/:id', reservationsController.createReservations);
+
+
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))
