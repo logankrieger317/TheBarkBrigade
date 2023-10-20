@@ -10,8 +10,16 @@ const main = async () => {
         name: 'test Name',
         breed: 'test breed',
         age:"test age",
-        owner:"test owner",}
+        owner:"test owner",
+    },
+
+    {   name: 'Ranger',
+        breed: 'Lab',
+        age:"5",
+        owner:"Logan",   
+    }
     ]
+
 
     await Dogs.insertMany(dogs)
     console.log("Created some Dogs!!!")

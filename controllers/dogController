@@ -22,11 +22,11 @@ async function getAllDogs(req,res){
 async function getDogsById(req,res){
     try{
         const {id} = req.params;
-        const user = await Users.findById(id);
+        const dogs = await Dogs.findById(id);
         if(dogs){
-            return res.json(user);
+            return res.json(dogs);
         }
-        res.status(404).json({message:'User not found!'})
+        res.status(404).json({message:'Dog not found!'})
     }catch(error){
         res.status(500).json({error:error.message})
     }
@@ -35,7 +35,7 @@ async function getDogsById(req,res){
 async function deleteDog(req,res){
     try{
         const {id} = req.params;
-        const deleted = await Users.findByIdAndDelete(id);
+        const deleted = await Dogs.findByIdAndDelete(id);
         if(deleted){
             return res.status(200).send("Dog deleted");
         }
@@ -48,8 +48,8 @@ async function deleteDog(req,res){
 async function updateDog(req,res){
     try{
         const id = req.params.id;
-        const {name,phone,email} = req.body;
-        const updated = await Users.findByIdAndUpdate(id,{name,breed,age,owner},{new:true});
+        const {name,breed,age,owner} = req.body;
+        const updated = await Dogs.findByIdAndUpdate(id,{name,breed,age,owner},{new:true});
     }
     catch(error){
         res.status(500).json({error:error.message})
@@ -59,7 +59,7 @@ async function updateDog(req,res){
 async function createDog(req,res){
     try{
         const dogs = await Dogs.create(req.body);
-        res.json(user);
+        res.json(dogs);
     }catch(error){
         res.status(500).json({error:error.message})
     }

@@ -93,15 +93,14 @@
                 <div class="centerContent">
                     <h1> Join the Bark Brigade</h1>
                     
-                    <form class="newpetForm" action="">
-                        <input type="text" name="name" id="name" placeholder="Name">
-                        <input type="text" name="breed" id="breed" placeholder="Breed">
-                        <input type="text" name="age" id="age" placeholder="Age">
-                        <input type="text" name="owner" id="owner" placeholder="Owner">
-                        <button class="button" onclick="exisitingUser()">Submit</button>
-                        
+                    <form class="newpetForm" action="reservation.html" method="post">
+                        <input type="text" name="name" id="name" placeholder="Name" required >
+                        <input type="text" name="breed" id="breed" placeholder="Breed" required>
+                        <input type="text" name="age" id="age" placeholder="Age" required>
+                        <input type="text" name="owner" id="owner" placeholder="Owner" required>
+                        <a href="exisitingUser.html"><button class="button">Submit</button></a>
                     </form>
-                    <button id="exisitingRedirect " onclick="exisitingUser()">test</button>
+                    <a href="exisitingUser.html"><button class="button">Back</button></a>
                     
            </div>
            <footer>
@@ -116,9 +115,3 @@
 </html>
 
 
-<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
-<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
-<!-- <script defer src="../scripts/community-parts-script.js"></script> -->
-
-    <!-- javascript -->
-    <!-- let partObj = await axios.get(`http://localhost:3001/${partCollectionURL}/${partID}`) -->
