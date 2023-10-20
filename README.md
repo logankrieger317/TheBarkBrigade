@@ -24,7 +24,7 @@ The add a new visit button will take the user to a screen where they can select 
 
 The view current dogs button will take the user to a screen where they can see all the dogs currently in the park. The user will be able to select a dog and see all the visits that dog has had. The user will also be able to select a visit and see the owner of the dog that visited the park on that date.
 
-***Function***
+***Wire Frame***
 
 ![Alt text](image.png)
 ![Alt text](image-1.png)
