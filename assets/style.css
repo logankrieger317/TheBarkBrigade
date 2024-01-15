@@ -1,107 +1,99 @@
 /* main styling */
-*{
-    max-width: 430px;
-    max-height: 900px;
-    font-family: 'Noto Serif', serif;
+* {
+  max-width: 100%;
+  height: auto;
+  font-family: "Noto Serif", serif;
 }
 
-body{
-    height: 900px;
-    cursor: url(images/puppyPaw.jpeg),auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    cursor: url(images/puppyPawThumb.jpeg);
-   
-    
+body {
+  height: 100vh;
+  cursor: url("images/puppyPaw.jpeg"), auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-.fullScreenContainer{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.fullScreenContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.header{
-    display: flex;
-    width: 100%;
-    background-color: #4FD3D5;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 20px;
+.header {
+  display: flex;
+  width: 100%;
+  background-color: #4fd3d5;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
 
-.centerContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 90%;
- 
+.centerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90%;
 }
 
-.centerContent{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 20px;
-    padding: 20px;
-    
-    
+.centerContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding: 20px;
 }
 
-.newUserForm{
-    height: 60%;
-    padding: 0px;
+.newUserForm {
+  height: 60%;
+  padding: 0px;
 }
 
-footer{
-   display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    width: 100%;
-    background-color: #4FD3D5;
-   
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  background-color: #4fd3d5;
 }
 
-.button{
-    border-radius: 20%;
-    margin: 10px;
-    background-color: #FBE63B;
-    border: 1px solid #FFF8BA ;
-    box-shadow: 0px 0px 10px 0px #AE9C00;
-    height: 100px;
-    width: 200px;
-    font-size: large;
-    font-weight: bold;  
+.button {
+  border-radius: 20%;
+  margin: 10px;
+  background-color: #fbe63b;
+  border: 1px solid #fff8ba;
+  box-shadow: 0px 0px 10px 0px #ae9c00;
+  height: auto;
+  width: auto;
+  font-size: large;
+  font-weight: bold;
 }
 
-form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 20px;
-    
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
-input{
-    padding: 20px;
-    margin: 20px;
+input {
+  padding: 20px;
+  margin: 20px;
 }
 
-.buttonMenu{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 20px;
-    padding: 20px;
+.buttonMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding: 20px;
 }
 
 
